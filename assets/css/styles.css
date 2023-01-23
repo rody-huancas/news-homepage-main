@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+
+:root {
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+  --off-white: hsl(36, 100%, 99%);
+  --Grayish-blue: hsl(233, 8%, 79%);
+  --Dark-grayish-blue: hsl(236, 13%, 42%);
+  --Very-dark-blue: hsl(240, 100%, 5%);
+  --Font-size: 0.9375rem;
+  --Font-inter: "Inter", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--off-white);
+  font-size: var(--Font-size);
+  font-family: var(--Font-inter);
+  color: var(--Dark-grayish-blue);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 5rem;
+}
+
+/*********START HEADER*********/
+.header {
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .header-container {
+}
+
+.header .header-container .hamburguer {
+  width: 25px;
+  height: 20px;
+  background-image: url("../images/icon-menu.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: none;
+}
+
+.header .header-container .active-menu {
+}
+
+.header .header-container .navigation {
+  display: flex;
+  gap: 2rem;
+}
+
+.header .header-container .navigation .link {
+  color: var(--Dark-grayish-blue);
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.header .header-container .navigation .link:hover {
+  color: var(--soft-red);
+}
+
+/* menu responsive */
+@media (max-width: 700px) {
+  .header {
+    width: 100%;
+  }
+
+  .header .header-container {
+    height: 100vh;
+    /* background-color: cadetblue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header .header-container .hamburguer {
+    margin-top: 15rem;
+    display: block;
+  }
+
+  .header .nav {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+  }
+
+  .header .nav .navigation {
+    flex-direction: column;
+  }
+}
+
+/*********END HEADER*********/
